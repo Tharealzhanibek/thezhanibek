@@ -1,0 +1,47 @@
+/* Menu Container */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem; 
+    background-color: #303030; /* Dark grey background */
+}
+
+/* Branding (Name) Section */
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: #F5F5F5; /* Light grey text */
+    text-decoration: none;
+    padding: 0.8rem 1.5rem; /* Space for hover effect */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+/* Hover effect: change background instead of text */
+.name:hover {
+    background-color: #505050 !important; /* Green background on hover */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    gap: 2rem; /* Space between nav items */
+}
+
+/* Navbar Links */
+.navbar div {
+    color: #F5F5F5 !important; /* Light grey text */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    padding: 0.8rem 1.5rem; /* Space for hover effect */
+    border-radius: 5px; /* Rounded corners */
+    display: inline-block; /* Helps with hover effect */
+}
+
+/* Hover effect: only change background */
+.navbar div:hover {
+    background-color: #505050  !important; /* Green background */
+}

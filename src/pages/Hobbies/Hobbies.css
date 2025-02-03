@@ -1,0 +1,62 @@
+/* Centers the entire Hobbies component on the page */
+.hobbies-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Takes full viewport height */
+    width: 100%;
+}
+
+/* Centers individual hobby containers */
+.hobby-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #303030;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Enlarged video */
+.hobby-video {
+    width: 100%;
+    max-width: 500px; /* Larger video */
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.hobby-video video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+/* Fullscreen video */
+.hobby-video video:fullscreen {
+    width: 80vw;
+    height: auto;
+    max-width: 800px;
+    object-fit: contain;
+    background-color: transparent;
+} 
+
+/* Text centered below the video */
+.hobby-name {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ddd;
+    padding: 10px 0;
+}
