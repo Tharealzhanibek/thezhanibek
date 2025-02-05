@@ -26,7 +26,10 @@ export const Hobbies = () => {
     return (
         <div className="hobbies-container">
             <Greeter backgroundPhoto={guitar} title="HOBBIES"/>
-            <Hobby video={dombra} name='Performing the composition "Kerogli" on the national instrument dombra at the school concert.'  />
+            <p className="hobbies-intro">
+                I look forward to continuing my hobbies at university by joining or establishing music and sports-related clubs.
+            </p>
+            <Hobby video={dombra} name='Performing the composition "Kerogli" on the national instrument dombra at the school concert.' />
             <Hobby video={uide} name='Performing a guitar cover of "Uide" by Darkhan Juzz.' />
             <Hobby video={basketball} name="Participating in Regional Streetball Competition." />
         </div>

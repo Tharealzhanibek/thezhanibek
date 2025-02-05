@@ -20,9 +20,9 @@ export const Awards = () => {
     return (
         <>
             <Greeter backgroundPhoto={greeter} title="AWARDS" />
-            <Award photo={honor1} description="" />
-            <Award photo={honor2} description="" />
-            <Award photo={honor3} description="" />
+            <Award photo={honor1} description="3rd place in the Bostandyk Region's English Olympaid" />
+            <Award photo={honor2} description="1st place in the International Science & Language Olympaid in Informatics" />
+            <Award photo={honor3} description='"Study With Us" 1000$ Scholarship' />
         </>
     );
 };

@@ -16,36 +16,67 @@ import { Greeter } from '../Greeter/Greeter';
 
 import "./Projects.css";
 
-const Project = ({ title, array, description }) => {
+const Project = ({ title, images, descriptions }) => {
     return (
         <div className="project-container">
             <h2 className="project-title">{title}</h2>
             <div className="project-content">
                 <div className="project-slider">
-                    <ImageSlider images={array} />
+                    {descriptions ? (
+                        <ImageSlider images={images} descriptions={descriptions} />
+                    ) : (
+                        <ImageSlider images={images} />
+                    )}
                 </div>
-                
             </div>
         </div>
     );
 };
 
 export const Projects = () => {
+    const roboticsTeamImages = [zertte, zerttesec];
+    const roboticsTeamDescriptions = [
+        'Our team "Zertte" at the Almaty First Regional Championship.',
+        "Working on a robot with our mentor. This photo was taken with the consent of my teammates."
+    ];
 
-    const roboticsArray = [zertte, zerttesec];
     const roboticsAwards = [award2, award3, award4, award1];
-    
-    const komekArray = [komek1, komek2, komek3];
+    const roboticsAwardsDescriptions = [
+        'We won 3rd place in the Inspire Award for our extensive outreach to orphanages, where we taught children the basics of robotics.',
+        'We won 1st place in the Connect Award for our innovation in robot control and for mentoring a rookie team.',
+        'We won the First Global Grand Challenge Runner-Up Award for the outstanding performance of our robot.',
+        'We won 2nd place in the Al-Farabi Award for First Global International Excellence for our outreach projects in the STEM field and the perseverance we demonstrated in the playoff matches.'
+    ];
+
+    const komekTeamImages = [komek1, komek2, komek3];
+    const komekTeamDescriptions = [
+        'My first education fair volunteering project with IBRIDGE and 360Mentors, where I coordinated approximately 13 volunteers who assisted as translators for university representatives.',
+        'MK Study Centre\'s education fair, where I coordinated 25 volunteers who assisted as translators for university representatives.',
+        'Get Education\'s education fair, where I coordinated 40 volunteers who assisted as translators for university representatives.'
+    ];
+
     const komekAwards = [certificate1, certificate2];
+    const komekAwardsDescriptions = [
+        
+    ];
 
     return (
         <div className="projects-container">
             <Greeter backgroundPhoto={zerttesec} title="PROJECTS"/>
-            <Project title='Programmer and Captain of FTC Robotics team "Zertte"' array={roboticsArray} description=""/>
-            <ImageSlider images={roboticsAwards}/>
-            
-            <Project title='Coordinator of "KOMEK" volunteer organization ' array={komekArray} description="vndfiusonvdfios"/>
-            <ImageSlider images={komekAwards}/>
+
+            <Project 
+                title='Programmer and Captain of FTC Robotics team "Zertte"' 
+                images={roboticsTeamImages} 
+                descriptions={roboticsTeamDescriptions} 
+            />
+            <ImageSlider images={roboticsAwards} descriptions={roboticsAwardsDescriptions}/>
+
+            <Project 
+                title='Coordinator of "KOMEK" volunteer organization' 
+                images={komekTeamImages} 
+                descriptions={komekTeamDescriptions} 
+            />
+            <ImageSlider images={komekAwards} descriptions={komekAwardsDescriptions}/>
         </div>
     );
 };

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './ImageSlider.css';
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images, descriptions }) => {
     if (!images || images.length === 0) {
         return <p>No images available</p>;
     }
@@ -42,6 +42,11 @@ const ImageSlider = ({ images }) => {
             {/* Right Arrow - Hidden if on the last image */}
             {currentIndex < images.length - 1 && (
                 <button className="next-button" onClick={goNext}>❯</button>
+            )}
+
+            {/* Description Below the Image */}
+            {descriptions && descriptions.length > currentIndex && (
+                <p className="slider-description">{descriptions[currentIndex]}</p>
             )}
         </div>
     );
